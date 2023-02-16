@@ -11,13 +11,15 @@ env:
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2.5.1
-      - name: Setup Java
-        uses: actions/setup-java@v2.6.1
-        with:
-          java-version: '16'
+    - name : Checkout code
+      uses: actions/checkout@v2.5.1
+
+    - name: Setup Java
+      uses: actions/setup-java@v2.6.1
+      with:
+        java-version: '16'
 
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
